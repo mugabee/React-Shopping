@@ -11,6 +11,7 @@ const Context = ({ children }) => {
         id: faker.datatype.uuid(),
         name: faker.commerce.productName(),
         price: faker.commerce.price(),
+        image: faker.commerce.image(),
 
 
     }));
