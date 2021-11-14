@@ -20,6 +20,12 @@ const ProductFilters = () => {
         />
         <span class="ml-2">Descending</span>
       </label>
+      <label class="flex items-center">
+        <input type="checkbox" class="form-checkbox" />
+        <span class="ml-2">
+          Include Out of stock
+        </span>
+      </label>
     </div>
   );
 };
