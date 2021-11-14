@@ -1,10 +1,9 @@
 import { CartState } from "../Context/Context";
 
 const Home = () => {
-    return 
-        <div>
-            Home Connected
-        </div>
+    const { state } = CartState();
+    console.log(state)
+    return <div>  Home Connected </div>
     
 }
 
