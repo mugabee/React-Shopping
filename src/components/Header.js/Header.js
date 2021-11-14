@@ -10,7 +10,7 @@ const Header = () => {
         <div class="pl-4 flex items-center">
           <Link
             class="toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-            href="#"
+            to="#"
           >
             Shopping Cart
           </Link>
@@ -27,7 +27,7 @@ const Header = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              <to d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
           </button>
         </div>
@@ -39,7 +39,7 @@ const Header = () => {
             <li class="mr-3">
               <Link
                 class="inline-block py-2 px-4 text-black font-bold no-underline"
-                href="#"
+                to="#"
               >
                 Active
               </Link>
@@ -47,7 +47,7 @@ const Header = () => {
             <li class="mr-3">
               <Link
                 class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#"
+                to="#"
               >
                 link
               </Link>
@@ -55,7 +55,7 @@ const Header = () => {
             <li class="mr-3">
               <Link
                 class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#"
+                to="#"
               >
                 link
               </Link>
