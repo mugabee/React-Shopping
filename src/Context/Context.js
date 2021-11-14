@@ -22,7 +22,7 @@ const Context = ({ children }) => {
 
     console.log(products);
 
-    return <ShoppingCart.Provider>{children}</ShoppingCart.Provider>;
+    return <ShoppingCart.Provider value={{products}}>{children}</ShoppingCart.Provider>;
 };
 
 export default Context
