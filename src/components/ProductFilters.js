@@ -22,11 +22,16 @@ const ProductFilters = () => {
       </label>
       <label className="py-1 text-xl mx-10 ">
         <input type="checkbox"  />
-        <span className=" pb-8">Fast Delivery Only</span>
+        <span className=" ">Fast Delivery Only</span>
       </label>
+      <span>
+      <label className="py-1 text-xl mx-10 ">Rating:
+      </label>
+          
+      </span>
       <button
         
-        className="mx-auto lg:mx-0 hover:underline bg-blue-700 text-white font-bold rounded-3xl mt-4 lg:mt-0 py-2 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+        className="mx-auto lg:mx-0 hover:underline bg-blue-700 text-white font-bold rounded-3xl mt-4 lg:mt-0 py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
       >
         clear
       </button>
