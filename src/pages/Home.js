@@ -13,7 +13,7 @@ const Home = () => {
         <div> 
             <ProductFilters />
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-4 gap-4">
             {products.map((product) => {
                return <ProductDisplay product={product} key={product.id}/>
             })}
