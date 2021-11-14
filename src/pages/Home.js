@@ -1,3 +1,4 @@
+import ProductDisplay from "../components/ProductDisplay";
 import { CartState } from "../Context/Context";
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
     return <div>  
         <div>
             {products.map((product) => {
-               return <span>{product.name}</span>;
+               return <ProductDisplay product={product} key={product.id}/>
             })}
         </div>
     </div>
