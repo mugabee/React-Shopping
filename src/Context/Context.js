@@ -20,9 +20,14 @@ const Context = ({ children }) => {
 
     }));
 
-    console.log(products);
+    // here instead of using value={{products}}, in order to access products into app
+    // I used useReducer which is an alternative to useState
 
-    return <ShoppingCart.Provider value={{products}}>{children}</ShoppingCart.Provider>;
+    //usereducer better compared to usestate, when it comes to complex state logic that involves multiple sub-values 
+    //or when the next state depends on the previous one.
+
+
+    return <ShoppingCart.Provider>{children}</ShoppingCart.Provider>;
 };
 
 export default Context
