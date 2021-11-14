@@ -8,50 +8,50 @@ const Header = () => {
           <nav className="w-full z-30 top-0 text-black py-1 lg:py-6">
             <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
               <div className="pl-4 flex items-center">
-                <Link
+                <a
                   to="/"
                   className="text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
                 >
                   React Work
-                </Link>
+                </a>
               </div>
 
               <div className="" id="nav-content">
                 <ul className="list-reset lg:flex justify-end flex-1 items-center">
                   <li className="mr-3">
-                    <Link
+                    <a
                       to="/"
                       className="inline-block md:border border-black hover:bg-blue-200 text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                     >
                       Home
-                    </Link>{" "}
+                    </a>{" "}
                   </li>{" "}
                   <li className="mr-3">
                     {" "}
-                    <Link
+                    <a
                       to="/Add"
                       className="inline-block md:border border-black hover:bg-blue-200 text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                     >
                       Add
-                    </Link>
+                    </a>
                   </li>
                   <li className="mr-3">
                     {" "}
-                    <Link
+                    <a
                       to="/About"
                       className="inline-block md:border border-black hover:bg-blue-200 text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                     >
                       About
-                    </Link>
+                    </a>
                   </li>
                   <li className="mr-3">
                     {" "}
-                    <Link
+                    <a
                       to="/Contacts"
                       className="inline-block md:border border-black hover:bg-blue-200 text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                     >
                       Contacts
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
