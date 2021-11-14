@@ -1,6 +1,6 @@
 const CartDrop = () => {
   return (
-    <div className="ml-64 my-20">
+    <div className="ml-96 my-20">
       <div className="flex h-64 justify-center">
         <div className="relative ">
           <div className="flex flex-row cursor-pointer truncate p-2 px-4  rounded">
