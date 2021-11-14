@@ -2,7 +2,7 @@ import Rating from "./Rating";
 import { useState } from "react";
 
 const ProductFilters = () => {
-    const [rating, setRate] = useState(5)
+    const [rating, setRate] = useState(3)
 
 
   return (
