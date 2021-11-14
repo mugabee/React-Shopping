@@ -4,6 +4,7 @@ import CartDrop from './components/Header.js/CartDrop'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import CartPage from './pages/CartPage'
+import ErrorPage from './pages/ErrorPage'
 
 
 const App = () => {
@@ -20,6 +21,9 @@ const App = () => {
           <CartPage />
 
         </Route>
+        <Route path="*" exact>
+                <ErrorPage/>
+              </Route>
       </div>
       
     </BrowserRouter>
