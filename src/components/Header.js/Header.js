@@ -2,9 +2,8 @@ import React from 'react'
 
 const Header = () => {
     return (
-<div>
+
     
-        <Router>
           <nav className="w-full z-30 top-0 text-black py-1 lg:py-6">
             <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
               <div className="pl-4 flex items-center">
@@ -57,31 +56,7 @@ const Header = () => {
               </div>
             </div>
           </nav>
-          <div className="lg:mx-64 border rounded-2xl border-red-100 bg-black bg-opacity-700 ">
-  
-
-
-               path="/Add">
-                <Add/>
-              <>
-               path="/About">
-                <About/>
-              <>
-               path="/Contacts">
-                <Contacts/>
-              <>
-
-               path="/" exact>
-                <MainSection/>
-              <>
-               path="*" exact>
-                <Error/>
-              <>
-     
-          </div>
-
-
-    </div>
+          
   );  
 }
 
