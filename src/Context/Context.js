@@ -2,12 +2,11 @@ import { createContext } from "react";
 
 const ShoppingCart = createContext();
 
-const Context = () => {
-    return (
+const Context = ({ children }) => {
+    return 
         <ShoppingCart.Provider>
-            
-        </ShoppingCart.Provider>
-    )
-}
+            { children }
+        </ShoppingCart.Provider>;
+};
 
 export default Context
