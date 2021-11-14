@@ -1,5 +1,5 @@
 const Rating = ({rating, Onclick, style}) => {
-    return  <div> </div>
+    return  <> </>
 }
 
 export default Rating
