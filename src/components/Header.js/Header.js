@@ -1,4 +1,5 @@
 import React from "react";
+import Search from "./Search";
 
 const Header = () => {
   return (
@@ -12,6 +13,7 @@ const Header = () => {
             Shopping Cart
           </a>
         </div>
+        <Search/>
         <div class="block lg:hidden pr-4">
           <button
             id="nav-toggle"
