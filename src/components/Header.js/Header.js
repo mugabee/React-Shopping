@@ -1,6 +1,6 @@
 import React from "react";
 import Search from "./Search";
-import CartDrop from "./CartDrop";
+
 
 const Header = () => {
   return (
