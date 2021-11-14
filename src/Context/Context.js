@@ -4,9 +4,9 @@ const ShoppingCart = createContext();
 
 const Context = () => {
     return (
-        <div>
+        <ShoppingCart.Provider>
             
-        </div>
+        </ShoppingCart.Provider>
     )
 }
 
