@@ -1,9 +1,19 @@
 import { CartState } from "../Context/Context";
 
 const Home = () => {
-    const { state } = CartState();
+    const { 
+        //here I am destructring by selecting only products
+        state: { products },
+    } = CartState();
+
     console.log(state)
-    return <div>  Home Connected </div>
+    return <div>  
+        <div>
+            {products.map((product) => {
+               return <span>{product.name}</span>;
+            })}
+        </div>
+    </div>
     
 }
 

@@ -21,9 +21,9 @@ const App = () => {
           <CartPage />
 
         </Route>
-        <Route path="*" exact>
+        {/* <Route path="*" exact>
                 <ErrorPage/>
-              </Route>
+              </Route> */}
       </div>
       
     </BrowserRouter>
