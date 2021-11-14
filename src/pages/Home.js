@@ -9,7 +9,7 @@ const Home = () => {
 
     console.log(products)
     return <div>  
-        <div>
+        <div className="grid grid-cols-4 gap-4">
             {products.map((product) => {
                return <ProductDisplay product={product} key={product.id}/>
             })}
