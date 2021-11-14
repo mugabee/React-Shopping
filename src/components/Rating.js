@@ -5,6 +5,7 @@ const Rating = ({rating, Onclick, style}) => {
         // it is a good idea to start by creating a 5 element array
         {[...Array(5)].map((_i) => (
             <span>
+            {rating}
             </span>
 
         ))}
