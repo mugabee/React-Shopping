@@ -1,9 +1,11 @@
+import { CartState } from "../Context/Context";
+
 const Home = () => {
-    return (
+    return 
         <div>
             Home Connected
         </div>
-    )
+    
 }
 
 export default Home
