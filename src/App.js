@@ -4,7 +4,7 @@ import Header from './components/Header.js/Header'
 const App = () => {
   return (
     <div>
-      <Header />
+      
       
     </div>
   )
