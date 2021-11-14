@@ -31,8 +31,8 @@ const ProductFilters = () => {
         <span className=" ">Fast Delivery Only</span>
       </label>
 
-      <label className="py-1 text-xl mx-10 ">Rating:
-      <Rating rating={rating} style={{cursor: "pointer"}}/>
+      <label className="py-1 text-xl mx-10 grid grid-flow-col auto-cols-max ">Rating:
+      <Rating rating={rating} Onclick={(i) => setRate(i)}/>
       </label>
           
       <button
