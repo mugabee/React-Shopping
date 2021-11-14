@@ -1,7 +1,10 @@
 import React from 'react'
 import Header from './components/Header.js/Header'
 import CartDrop from './components/Header.js/CartDrop'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import CartPage from './pages/CartPage'
+
 
 const App = () => {
   return (
