@@ -6,7 +6,7 @@ const Home = () => {
         state: { products },
     } = CartState();
 
-    console.log(state)
+    console.log(products)
     return <div>  
         <div>
             {products.map((product) => {
