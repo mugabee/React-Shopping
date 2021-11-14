@@ -1,5 +1,5 @@
 const ProductDisplay = ({product}) => {
-    return <div>{product.name}</div>;   
+    return <div className="flex"><div>{product.name}</div></div>;   
 };
 
 export default ProductDisplay;
