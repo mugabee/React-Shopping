@@ -2,7 +2,7 @@ import Rating from "./Rating";
 import { useState } from "react";
 
 const ProductFilters = () => {
-    const [rating, setRate] = useState(3)
+    const [rating, setRate] = useState( );
 
 
   return (
@@ -32,7 +32,12 @@ const ProductFilters = () => {
       </label>
 
       <label className="py-1 text-xl mx-10 grid grid-flow-col auto-cols-max ">Rating:
-      <Rating rating={rating} Onclick={(i) => setRate(i)}/>
+      <Rating rating={rating}
+
+       onClick={(i) => setRate(i + 1 )}
+       style={{ cursor: "pointer" }}
+       />
+
       </label>
           
       <button
