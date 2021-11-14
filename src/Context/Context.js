@@ -12,7 +12,7 @@ const Context = ({ children }) => {
         id: faker.datatype.uuid(),
         name: faker.commerce.productName(),
         price: faker.commerce.price(),
-        image: faker.commerce.image(),
+        image: faker.random.image(),
         inStock: faker.commerce.arrayElement([0, 3, 5, 6, 7]),
         fastDelivery: faker.datatype.boolean(),
         ratings: faker.random.arrayElement([1, 2, 3, 4, 5]),
