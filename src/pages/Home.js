@@ -1,5 +1,6 @@
 import ProductDisplay from "../components/ProductDisplay";
 import { CartState } from "../Context/Context";
+import ProductFilters from "../components/ProductFilters";
 
 const Home = () => {
     const { 
@@ -8,8 +9,11 @@ const Home = () => {
     } = CartState();
 
     console.log(products)
-    return <div>  
-        <div className="grid grid-cols-4 gap-4">
+    return <div className="flex justify-between">  
+        <div> 
+            <ProductFilters />
+        </div>
+        <div className="grid grid-cols-3 gap-4">
             {products.map((product) => {
                return <ProductDisplay product={product} key={product.id}/>
             })}
