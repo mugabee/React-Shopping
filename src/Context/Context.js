@@ -6,6 +6,7 @@ const ShoppingCart = createContext();
 const Context = ({ children }) => {
 
     //here we are using faker.js (a javascript library for generating fake data)
+    // https://www.npmjs.com/package/faker
 
     const products = [...Array(20)].map(() =>({
         id: faker.datatype.uuid(),
@@ -18,6 +19,8 @@ const Context = ({ children }) => {
 
 
     }));
+
+    console.log(products);
 
     return <ShoppingCart.Provider>{children}</ShoppingCart.Provider>;
 };
