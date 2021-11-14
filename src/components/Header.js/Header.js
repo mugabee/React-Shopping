@@ -58,29 +58,28 @@ const Header = () => {
             </div>
           </nav>
           <div className="lg:mx-64 border rounded-2xl border-red-100 bg-black bg-opacity-700 ">
-            <Title />
+  
 
-            <Switch>
-              <Route path="/Add">
+
+               path="/Add">
                 <Add/>
-              </Route>
-              <Route path="/About">
+              <>
+               path="/About">
                 <About/>
-              </Route>
-              <Route path="/Contacts">
+              <>
+               path="/Contacts">
                 <Contacts/>
-              </Route>
+              <>
 
-              <Route path="/" exact>
+               path="/" exact>
                 <MainSection/>
-              </Route>
-              <Route path="*" exact>
+              <>
+               path="*" exact>
                 <Error/>
-              </Route>
-            </Switch>
- 
+              <>
+     
           </div>
-        </Router>
+
 
     </div>
   );  
