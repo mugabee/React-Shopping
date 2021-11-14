@@ -26,7 +26,7 @@ const Context = ({ children }) => {
     //usereducer better compared to usestate, when it comes to complex state logic that involves multiple sub-values 
     //or when the next state depends on the previous one.
 
-     const [state, dispatch] = useReducer(cartReducer,{
+     const [state, dispatch] = useReducer(cartReducer, {
          products: products,
          cart:[]
 
