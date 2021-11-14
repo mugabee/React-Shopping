@@ -9,7 +9,7 @@ const Header = () => {
           <div class="pl-4 flex items-center">
             <a class="toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
              
-              LANDING
+              Shopping Cart
             </a>
           </div>
           <div class="block lg:hidden pr-4">
