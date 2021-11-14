@@ -1,4 +1,10 @@
+import Rating from "./Rating";
+import { useState } from "react";
+
 const ProductFilters = () => {
+    const [rating, setRate] = useState(5)
+
+
   return (
     <div className="bg-gray-500 py-8 text-white grid grid-flow-row auto-rows-max">
       <span className=" py-4 text-3xl mx-10"> Products Filter</span>
@@ -26,7 +32,7 @@ const ProductFilters = () => {
       </label>
 
       <label className="py-1 text-xl mx-10 ">Rating:
-      <Rating />
+      <Rating rating={rating} style={{cursor: "pointer"}}/>
       </label>
           
       <button
