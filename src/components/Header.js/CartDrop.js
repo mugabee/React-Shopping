@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { CartState } from "../../Context/Context";
 import { AiFillDelete } from "react-icons/ai";
+
 import { Link } from "react-router-dom";
 
 const CartDrop = () => {
@@ -20,12 +21,12 @@ const CartDrop = () => {
       <div className="flex h-64 justify-center">
         <div className="relative ">
           <div className="flex flex-row cursor-pointer truncate p-2 px-4  rounded">
-            <div></div>
             <div className="flex flex-row-reverse ml-2 w-full">
               <div slot="icon" className="relative">
                 <div className="absolute text-xs rounded-full -mt-1 -mr-2 px-1 font-bold top-0 right-0 bg-red-700 text-white">
                   {cart.length}
                 </div>
+                
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="100%"
@@ -45,6 +46,7 @@ const CartDrop = () => {
               </div>
             </div>
           </div>
+
           <div className="absolute w-full  rounded-b border-t-0 z-10">
             <div className="shadow-xl w-64">
               {cart.length > 0 ? (
