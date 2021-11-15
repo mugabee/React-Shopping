@@ -3,7 +3,9 @@
 export const cartReducer = (state, action) => {
     switch (action.type) {
         case "ProductAddToCart": 
-        //this will return our current state which was already there
+        //this will return our current state which was already there 
+        // and manipulate it
+        
         return {...state,}
         default:
             return state;
