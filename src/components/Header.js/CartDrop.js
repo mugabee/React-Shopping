@@ -37,16 +37,23 @@ const CartDrop = () => {
           <div className="absolute w-full  rounded-b border-t-0 z-10">
             <div className="shadow-xl w-64">
                 {cart.length > 0 ? (
-                    <span className="p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100" key={product.id}>
+                    <>
+                    {cart.map((product) => (
+                        <span className="p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100" key={product.id}>
                         <div className="p-2 w-12">
                         <img
-                    src={product.image}
-                    alt={product.name}
-                  />
+                            src={product.image}
+                            alt={product.name}
+                        />
 
                         </div>
                     </span>
-                )}
+                    ))
+
+                    }
+                    </>
+                ) : (<span> empty</span>)}
+
              {/* <div className="p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100">
                 <div className="p-2 w-12">
                   <img
