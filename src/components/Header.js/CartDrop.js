@@ -1,4 +1,5 @@
 import { CartState } from "../../Context/Context";
+import { AiFillDelete } from "react-icons/ai";
 
 const CartDrop = () => {
   const {
@@ -54,7 +55,13 @@ const CartDrop = () => {
                 </div>
                 <div className="flex flex-col w-18 font-medium items-end">
                   <div className="w-4 h-4 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700">
-                    <AiFillDelete/>
+                    <AiFillDelete
+                    onClick={() => 
+                    dispatch({
+                        type: "ProductRemoveFromCart",
+                        payload: product,
+                    })
+                    }/>
                   </div>
                 </div>
                     </span>
