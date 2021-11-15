@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { CartState } from "../../Context/Context";
 import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -7,6 +8,13 @@ const CartDrop = () => {
     state: { cart },
     dispatch,
   } = CartState();
+  const [Total, setTotal] = useState();
+
+  useEffect(() => {
+      setTotal(cart.reduce((newPrice, currentPrice) => newPrice + Number(currentPrice.price), 0))
+     
+  }, [cart]);
+
   return (
     <div className="ml-96 my-20">
       <div className="flex h-64 justify-center">
@@ -92,10 +100,10 @@ const CartDrop = () => {
         border duration-200 ease-in-out 
         border-teal-600 transition"
                   >
-                    Total 3666 RWF
+                    {Total} RWF
                   </button>
                   <Link to="/CartPage">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
+                  <button Total={Total} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
                     Go to cart Page
                   </button>
                   </Link>
