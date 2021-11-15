@@ -130,8 +130,8 @@ const CartPage = () => {
             Order Summary
           </h1>
           <div className="flex justify-between mt-10 mb-5">
-            <span className="font-semibold text-sm uppercase">Items 3</span>
-            <span className="font-semibold text-sm">{Total}$</span>
+            <span className="font-semibold text-sm uppercase">{cart.length}</span>
+            <span className="font-semibold text-sm">{Total} RWF</span>
           </div>
           
           
