@@ -1,6 +1,13 @@
 import Rating from "./Rating";
+import { CartState } from "../Context/Context";
 
 const ProductDisplay = ({ product }) => {
+
+    const {
+        state: { cart },
+        dispatch,
+    } = CartState();
+    
   return (
     <div>
       <img src={product.image} alt={product.name} />
