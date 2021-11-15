@@ -84,11 +84,28 @@ const CartPage = () => {
                 </div>
               </div>
               <div className="flex justify-center w-1/5">
-                  <select value={product.quantity}>
-                {[...Array(product.instock).keys()].map((quantityNumber) => (
+                  <select value={product.quantity} 
+                  onChange={(element) =>
+                    dispatch({
+                        type:"ChangeCartQuantity",
+                        payload:{
+                            id: product.id,
+                            quantity: element.target.value,
+
+                        },
+
+                    })
+                }
+                  
+                  >
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                {/* {[...Array(product.instock).keys()].map((quantityNumber) => (
                     <option key={quantityNumber + 1 }> {quantityNumber + 1 }</option>
                 )
-                )}
+                )} */}
                 </select>
 
                
