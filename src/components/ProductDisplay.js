@@ -1,5 +1,8 @@
 const ProductDisplay = ({product}) => {
-    return <div>{product.name}</div>;   
+    return <div>
+        <img src={product.image} alt={product.name} />
+        <h1>{product.image}</h1>
+    </div>;   
 };
 
 export default ProductDisplay;
