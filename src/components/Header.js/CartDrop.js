@@ -38,58 +38,58 @@ const CartDrop = () => {
           </div>
           <div className="absolute w-full  rounded-b border-t-0 z-10">
             <div className="shadow-xl w-64">
-                {cart.length > 0 ? (
-                    <>
-                    {cart.map((product) => (
-                        <span className="p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100" key={product.id}>
-                        <div className="p-2 w-12">
-                        <img
-                            src={product.image}
-                            alt={product.name}
-                        />
+              {cart.length > 0 ? (
+                <>
+                  {cart.map((product) => (
+                    <span
+                      className="p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100"
+                      key={product.id}
+                    >
+                      <div className="p-2 w-12">
+                        <img src={product.image} alt={product.name} />
+                      </div>
+                      <div className="flex-auto text-sm w-32">
+                        <div className="font-bold">{product.name}</div>
 
+                        <div className="text-black py-2 font-bold">
+                          {product.price.split(".")[0]} RWF
                         </div>
-                        <div className="flex-auto text-sm w-32">
-                  <div className="font-bold">{product.name}</div>
-         
-                  <div className="text-black py-2 font-bold">{product.price.split(".")[0]} RWF</div>
-                </div>
-                <div className="flex flex-col w-18 font-medium items-end">
-                  <div className="w-4 h-4 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700">
-                    <AiFillDelete
-                    onClick={() => 
-                    dispatch({
-                        type: "ProductRemoveFromCart",
-                        payload: product,
-                    })
-                    }/>
-                  </div>
-                </div>
+                      </div>
+                      <div className="flex flex-col w-18 font-medium items-end">
+                        <div className="w-4 h-4 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700">
+                          <AiFillDelete
+                            onClick={() =>
+                              dispatch({
+                                type: "ProductRemoveFromCart",
+                                payload: product,
+                              })
+                            }
+                          />
+                        </div>
+                      </div>
                     </span>
-                    ))
+                  ))}
+                </>
+              ) : (
+                <span> empty</span>
+              )}
 
-                    }
-                    </>
-                ) : (<span> empty</span>)}
-
-             
               <div className="p-4 justify-center flex">
-                <button
-                  className="text-base  undefined  hover:scale-110 focus:outline-none flex justify-center px-4 py-2 rounded font-bold cursor-pointer 
+                <div>
+                  <button
+                    className="text-base  undefined  hover:scale-110 focus:outline-none flex justify-center px-4 py-2 rounded font-bold cursor-pointer 
         hover:bg-teal-700 hover:text-teal-100 
         bg-teal-100 
         text-teal-700 
         border duration-200 ease-in-out 
         border-teal-600 transition"
-                >
-                  Checkout $36.66
-                </button>
-                <button
-          
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4"
-          >
-          
-          </button>
+                  >
+                    Checkout $36.66
+                  </button>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
+                    Go to cart Page
+                  </button>
+                </div>
               </div>
             </div>
           </div>
