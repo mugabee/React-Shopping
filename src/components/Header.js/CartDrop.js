@@ -35,8 +35,8 @@ const CartDrop = () => {
             </div>
           </div>
           <div className="absolute w-full  rounded-b border-t-0 z-10">
-            {/* <div className="shadow-xl w-64">
-             <div className="p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100">
+            <div className="shadow-xl w-64">
+             {/* <div className="p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100">
                 <div className="p-2 w-12">
                   <img
                     src="https://dummyimage.com/50x50/bababa/0011ff&amp;text=50x50"
@@ -70,8 +70,8 @@ const CartDrop = () => {
                   </div>
                   $12.22
                 </div>
-              </div>
-              <div className="p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100">
+              </div> */}
+              {/* <div className="p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100">
                 <div className="p-2 w-12">
                   <img
                     src="https://dummyimage.com/50x50/bababa/0011ff&amp;text=50x50"
@@ -105,7 +105,7 @@ const CartDrop = () => {
                   </div>
                   $12.22
                 </div>
-              </div>
+              </div> */}
               <div className="p-4 justify-center flex">
                 <button
                   className="text-base  undefined  hover:scale-110 focus:outline-none flex justify-center px-4 py-2 rounded font-bold cursor-pointer 
@@ -119,7 +119,7 @@ const CartDrop = () => {
                 </button>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
       <div className="h-32"></div>
