@@ -6,6 +6,7 @@ const ProductDisplay = ({ product }) => {
     state: { cart },
     dispatch,
   } = CartState();
+  console.log(cart)
 
   return (
     <div>
