@@ -1,4 +1,7 @@
+import { CartState } from "../Context/Context";
+
 const CartPage = () => {
+    const
     return (
         <body className="bg-gray-100">
   <div className="container mx-auto mt-10">
