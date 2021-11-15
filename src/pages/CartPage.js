@@ -39,7 +39,7 @@ const [Total, setTotal] = useState();
               <img className="h-24" src="https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z" alt=""/>
             </div>
             <div className="flex flex-col justify-between ml-4 flex-grow">
-              <span className="font-bold text-sm">Iphone 6S</span>
+              <span className="font-bold text black text-sm">{product.name}</span>
               <span className="text-red-500 text-xs">Apple</span>
               <Link to="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</Link>
             </div>
