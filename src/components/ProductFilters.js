@@ -6,32 +6,32 @@ const ProductFilters = () => {
 
 
   return (
-    <div className="bg-gray-500 py-8 text-white grid grid-flow-row auto-rows-max">
-      <span className=" py-4 text-3xl mx-10"> Products Filter</span>
-      <label className=" py-1 text-xl mx-10 ">
+    <div className="bg-gray-500 py-8 h-full mr-6 text-white grid grid-flow-row auto-rows-max">
+      <span className=" py-8 text-3xl mx-10"> Products Filter</span>
+      <label className=" py-4 text-xl mx-10 ">
         <input
           type="radio"     
           name="group1"        
         />
         <span className=" ">Ascending</span>
       </label>
-      <label className=" py-1 text-xl mx-10 ">
+      <label className=" py-4 text-xl mx-10 ">
         <input
           type="radio"        
           name="group1"      
         />
         <span className=" ">Descending</span>
       </label>
-      <label className=" py-1 text-xl mx-10 ">
+      <label className=" py-4 text-xl mx-10 ">
         <input type="checkbox"  />
         <span className="ml-2">Include Out of stock</span>
       </label>
-      <label className="py-1 text-xl mx-10 ">
+      <label className="py-4 text-xl mx-10 ">
         <input type="checkbox"  />
         <span className=" ">Fast Delivery Only</span>
       </label>
 
-      <label className="py-1 text-xl mx-10 grid grid-flow-col auto-cols-max ">Rating:
+      <label className="py-4 text-xl mx-10 grid grid-flow-col auto-cols-max ">Rating:
       <Rating rating={rating}
 
        onClick={(i) => setRate(i + 1 )}

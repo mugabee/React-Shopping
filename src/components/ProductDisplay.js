@@ -9,15 +9,16 @@ const ProductDisplay = ({ product }) => {
   console.log(cart)
 
   return (
-    <div>
+    <div className=" mt-6 ">
       <img src={product.image} alt={product.name} />
-      <h1>{product.name}</h1>
-      <span>{product.price.split(".")[0]} RWF</span>
+      <div className="bg-gray-200 rounded-b-xl py-3">
+      <h1 className=" text-center  font-medium  ">{product.name}</h1>
+      <span className=" ml-20 font-medium  ">{product.price.split(".")[0]} RWF</span>
       <span>
         {product.fastDelivery ? (
-          <div> Fast Delivery</div>
+          <div className=" ml-12"> Fast Delivery</div>
         ) : (
-          <div>1 Week Delivery</div>
+          <div className=" ml-12" >1 Week Delivery</div>
         )}
       </span>
       <div className="py-1 text-xl mx-10 grid grid-flow-col auto-cols-max ">
@@ -51,6 +52,9 @@ const ProductDisplay = ({ product }) => {
           </button>
         )
       }
+      </div>
+      
+      
     </div>
   );
 };
