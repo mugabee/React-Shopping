@@ -106,7 +106,7 @@ const CartDrop = () => {
         border duration-200 ease-in-out 
         border-teal-600 transition"
                   >
-                    {Total} RWF
+                    Total Price {Total} RWF
                   </button>
                   <Link to="/CartPage">
                   <button Total={Total} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
