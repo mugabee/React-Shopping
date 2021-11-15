@@ -2,12 +2,11 @@ import Rating from "./Rating";
 import { CartState } from "../Context/Context";
 
 const ProductDisplay = ({ product }) => {
+  const {
+    state: { cart },
+    dispatch,
+  } = CartState();
 
-    const {
-        state: { cart },
-        dispatch,
-    } = CartState();
-    
   return (
     <div>
       <img src={product.image} alt={product.name} />
@@ -24,13 +23,21 @@ const ProductDisplay = ({ product }) => {
         <Rating rating={product.rating} />
       </div>
       {
-          //here I used some in order to check if the particular items
-          //exist in array we are using
-          cart.some()
+        //here I used some in order to check if the particular items
+        //exist in array we are using
+        cart.some((cartProduct) => cartProduct.id === product.id) ? (
+          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
+            remove to cart
+          </button>
+        ) : (
+          <button
+            disabled={!product.inStock}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4"
+          >
+            {!product.inStock ? "Out of Stock" : "Add to Cart"}
+          </button>
+        )
       }
-      <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">remove to cart</button>
-      <button disabled={!product.inStock} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">{!product.inStock ? "Out of Stock" : "Add to Cart"}</button>
- 
     </div>
   );
 };
