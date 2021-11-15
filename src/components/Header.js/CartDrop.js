@@ -1,4 +1,9 @@
+import { CartState } from "../../Context/Context";
+
 const CartDrop = () => {
+    const {
+        state: { cart },
+    } = CartState();
   return (
     <div className="ml-96 my-20">
       <div className="flex h-64 justify-center">
@@ -8,7 +13,7 @@ const CartDrop = () => {
             <div className="flex flex-row-reverse ml-2 w-full">
               <div slot="icon" className="relative">
                 <div className="absolute text-xs rounded-full -mt-1 -mr-2 px-1 font-bold top-0 right-0 bg-red-700 text-white">
-                  3
+                  {cart.length}
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
