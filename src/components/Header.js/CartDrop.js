@@ -47,6 +47,16 @@ const CartDrop = () => {
                         />
 
                         </div>
+                        <div className="flex-auto text-sm w-32">
+                  <div className="font-bold">{product.name}</div>
+         
+                  <div className="text-black py-2 font-bold">{product.price.split(".")[0]} RWF</div>
+                </div>
+                <div className="flex flex-col w-18 font-medium items-end">
+                  <div className="w-4 h-4 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700">
+                    <AiFillDelete/>
+                  </div>
+                </div>
                     </span>
                     ))
 
