@@ -9,7 +9,7 @@ const CartPage = () => {
   } = CartState();
 
   const [Total, setTotal] = useState();
-  const [SubTotal, setSubTotal] = useState();
+
 
   useEffect(() => {
     setTotal(
@@ -19,14 +19,6 @@ const CartPage = () => {
     );
   }, [cart]);
   
-//   useEffect(() => {
-//       setSubTotal(
-//           cart.reduce(
-//               (newQuantity, currentQuantity) =>
-//               newQuantity + Number(currentQuantity.price) * currentQuantity.quantity)         
-      
-//         );
-//   }, [cart]);
 
   return (
     <div className="container mx-auto mt-10">

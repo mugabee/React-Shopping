@@ -1,9 +1,24 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { CartState } from "../../Context/Context";
 import Search from "./Search";
+import { IoCart } from "react-icons/io5"
+import CartDrop from "./CartDrop";
+
 
 
 const Header = () => {
+    const {
+        state: { cart },
+        dispatch,
+      } = CartState();
+      const [Total, setTotal] = useState();
+    
+      useEffect(() => {
+          setTotal(cart.reduce((newPrice, currentPrice) => newPrice + Number(currentPrice.price), 0))
+         
+      }, [cart]);
   return (
     <nav id="header" class="fixed w-full z-30 top-0 bg-blue-500 text-white">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -36,6 +51,9 @@ const Header = () => {
           id="nav-content"
         >
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="mr-3 inline-block">
+             <CartDrop/>
+            </li>
             <li class="mr-3">
               <Link
                 class="inline-block py-2 px-4 text-black font-bold no-underline"
@@ -60,17 +78,9 @@ const Header = () => {
                 link
               </Link>
             </li>
-          </ul>
-          <select
             
-            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
-          </select>
-
+          </ul>
           
-
-
-
           
         </div>
       </div>

@@ -15,14 +15,18 @@ const CartDrop = () => {
       setTotal(cart.reduce((newPrice, currentPrice) => newPrice + Number(currentPrice.price), 0))
      
   }, [cart]);
+  const [dropProductCart, setDropProductCart] = useState(false);
+  const showCartProducts = () =>{
+      setDropProductCart(!dropProductCart)
+  }
 
   return (
-    <div className="ml-96 my-20">
-      <div className="flex h-64 justify-center">
-        <div className="relative ">
+    <div className=" ">
+      <div className=" ">
+        <div onClick={showCartProducts} className="relative ">
           <div className="flex flex-row cursor-pointer truncate p-2 px-4  rounded">
             <div className="flex flex-row-reverse ml-2 w-full">
-              <div slot="icon" className="relative">
+              <div  slot="icon" className="relative">
                 <div className="absolute text-xs rounded-full -mt-1 -mr-2 px-1 font-bold top-0 right-0 bg-red-700 text-white">
                   {cart.length}
                 </div>
@@ -46,9 +50,9 @@ const CartDrop = () => {
               </div>
             </div>
           </div>
-
-          <div className="absolute w-full  rounded-b border-t-0 z-10">
-            <div className="shadow-xl w-64">
+          <div className="bg-red-400">
+          <div className={`${dropProductCart? "" : "hidden" }  absolute w-full  rounded-b border-t-0 z-10`}>
+            <div className="shadow-xl bg-white w-64">
               {cart.length > 0 ? (
                 <>
                   {cart.map((product) => (
@@ -114,8 +118,12 @@ const CartDrop = () => {
             </div>
           </div>
         </div>
+
+          </div>
+
+          
       </div>
-      <div className="h-32"></div>
+   
     </div>
   );
 };
