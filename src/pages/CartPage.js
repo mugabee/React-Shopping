@@ -11,7 +11,7 @@ const CartPage = () => {
 const [Total, setTotal] = useState();
 
   useEffect(() => {
-      setTotal(cart.reduce((newPrice, currentPrice) => newPrice + Number(currentPrice.price), 0))
+      setTotal(cart.reduce((newPrice, currentPrice) => newPrice + Number(currentPrice.price)*currentPrice.quantity, 0))
      
   }, [cart]);
 
