@@ -35,7 +35,6 @@ const ProductFilters = () => {
       <Rating rating={rating}
 
        onClick={(i) => setRate(i + 1 )}
-       style={{ cursor: "pointer" }}
        />
 
       </label>
