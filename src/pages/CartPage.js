@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { CartState } from "../Context/Context";
 import { Link } from "react-router-dom";
+import ReactTypingEffect from "react-typing-effect"
 
 const CartPage = () => {
   const {
@@ -21,8 +22,8 @@ const CartPage = () => {
   
 
   return (
-    <div className="container mx-auto mt-10">
-      <div className="flex shadow-md my-10">
+    <div className="container  mx-auto mt-10">
+      <div className="flex  shadow-md my-10">
         <div className="w-3/4 bg-white px-10 py-10">
           <div className="flex justify-between border-b pb-8">
             <h1 className="font-semibold text-2xl">Shopping Cart</h1>
@@ -130,16 +131,38 @@ const CartPage = () => {
             Order Summary
           </h1>
           <div className="flex justify-between mt-10 mb-5">
-            <span className="font-semibold text-sm uppercase">{cart.length}</span>
-            <span className="font-semibold text-sm">{Total} RWF</span>
+           
+            <h1 className="  text-white  "> Dear Customer,
+            <ReactTypingEffect
+        text={[` You have added ${cart.length} products to your shopping cart which will cost you ${Total} RWF, Thank You for shopping with us`]}
+        speed={100}
+        eraseSpeed={100}
+        typingDelay={2500}
+        cursorRenderer={cursor => <h1>{cursor}</h1>}
+        displayTextRenderer={(text, i) => {
+          return (
+            <h1 className="text-white">
+              {text.split('').map((char, i) => {
+                const key = `${i}`;
+                return (
+                  <span
+                    key={key}
+                    
+                  >{char}</span>
+                );
+              })}
+            </h1>
+          );
+        }}        
+      /> </h1>
           </div>
           
           
          
           <div className="border-t mt-8">
-            <div className="flex font-semibold justify-between py-6 text-sm uppercase">
+            <div className="flex text-white font-semibold justify-between py-6 text-sm uppercase">
               <span>Total cost</span>
-              <span>$600</span>
+              <span>{Total} RWF</span>
             </div>
             <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
               Checkout
