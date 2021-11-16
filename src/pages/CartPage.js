@@ -11,7 +11,7 @@ const CartPage = () => {
 
   const [Total, setTotal] = useState();
 
-
+// calculating the total price by considering the quantity
   useEffect(() => {
     setTotal(
       cart.reduce(
